@@ -21,7 +21,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.get("/", (req, res) => {
-  res.render("page1", { ...template, page: "01", employees });
+  res.render("chart", { ...template, page: "01", employees });
 });
 app.get("/page2", (req, res) => {
   res.render("page2", { ...template, page: "02" });
