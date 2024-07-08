@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    body{
+
+    body {
         height: 842px;
     }
-    .body{
+
+    .body {
         height: 100%;
         padding: 4px;
     }
-    
-    header{
+
+    header {
         height: 3%;
         border-bottom: 1px solid #DCE1FF;
         font-size: .6rem;
         text-align: end;
         padding: 4px 20px;
     }
-    main{
+
+    main {
         height: 94%;
         display: flex;
         flex-direction: column;
@@ -34,19 +38,19 @@
         gap: 10px;
     }
 
-    footer{
+    footer {
         height: 3%;
         font-size: .6rem;
         border-top: 1px solid #DCE1FF;
         padding: 4px 20px;
     }
-
 </style>
+
 <body>
     <div class="body">
         <header>
-            <p> 
-              Fluid Dyanamics . Inc
+            <p>
+                Fluid Dyanamics . Inc
             </p>
         </header>
         <main>
@@ -56,7 +60,9 @@
 
                 </div>
                 <div class="left-chart">
-                    
+                    <div style="width: 500px;"><canvas id="dimensions"></canvas></div><br />
+                    <script type="module" src="/ejs/src/viewScripts/page2.js"></script>
+
                 </div>
             </div>
             <div class="container-two">
@@ -83,7 +89,7 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    
+
 </body>
 
 </html>

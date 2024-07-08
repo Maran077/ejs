@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    body{
+
+    body {
         height: 842px;
     }
-    .body{
+
+    .body {
         height: 100%;
         padding: 4px;
     }
-    
-    header{
+
+    header {
         height: 3%;
         border-bottom: 2px solid #DCE1FF;
         font-size: .6rem;
         text-align: end;
         padding: 4px 20px;
     }
-    main{
+
+    main {
         height: 94%;
         /*
         justify-content: center; 
@@ -36,167 +40,176 @@
         align-items: center;
         gap: 10px;
     }
-    .report{
+
+    .report {
         width: 50%;
         text-align: center;
 
 
     }
-    .report table{
+
+    .report table {
         width: 100%;
     }
-    .chart{
+
+    .chart {
         text-align: center;
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    footer{
+
+    footer {
         height: 3%;
         font-size: .6rem;
         border-top: 2px solid #DCE1FF;
         padding: 4px 20px;
     }
-    td{
-        text-align: start;
-        padding:5px 10px;
-    }
 
+    td {
+        text-align: start;
+        padding: 5px 10px;
+    }
 </style>
+
 <body>
     <div class="body">
         <header>
-            <p> 
-              Fluid Dyanamics . Inc
+            <p>
+                Fluid Dyanamics . Inc
             </p>
         </header>
         <main>
-          <div class="report">
-          <h2>Sustainability report</h2>
-          
-            <table>
-                <% for(let name in employees) { %>
-                    <tr>
-                        <td>
-                        <%= name %>
-                        </td>
-                        <td>
-                         <%= employees[name] %>
-                        </td>
-                        
-                    </tr>
-                    <% } %>
-            </table>
-          </div>
-          <div class="chart">
-               <h3>Overall emissions by scope for 01-Jan-2023 to 01-Dec-2023</h3>
-               <p> <span>
-                   77654.987
-                  </span>              
-                   mt CO2e</p>
-                <canvas id="myChart" ></canvas>
-          </div>
+            <div class="report">
+                <h2>Sustainability report</h2>
+
+                <table>
+                    <% for(let name in employees) { %>
+                        <tr>
+                            <td>
+                                <%= name %>
+                            </td>
+                            <td>
+                                <%= employees[name] %>
+                            </td>
+
+                        </tr>
+                        <% } %>
+                </table>
+            </div>
+            <div class="chart">
+                <h3>Overall emissions by scope for 01-Jan-2023 to 01-Dec-2023</h3>
+                <p> <span>
+                        77654.987
+                    </span>
+                    mt CO2e</p>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div> I am temp bro </div>
+            <div><canvas id="temp"></canvas></div>
+            <br />
         </main>
         <footer>
             ESG report 2022-2023
             climeup.ai
         </footer>
     </div>
+    <script type="module" src="/viewScripts/page2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-    
 
-<script>
-    Chart.register(ChartDataLabels);
-     const ctx = document.getElementById('myChart').getContext('2d');
-     const myChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-            datasets: [{
-                label: 'Scope 1',
-                data: [12, 19, 3, 5, 2, 3, 7],
-               // backgroundColor: 'rgba(75, 192, 192, 0.2)',
-               // fill: false,
-                borderColor: '#fff',
-                backgroundColor: [ '#0054AD' ,  '#0099D2' ,  '#00C8CF'  ],
-            }]
-        },
-        /*
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                    enabled: true
-                }
+
+    <script>
+        Chart.register(ChartDataLabels);
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Scope 1',
+                    data: [12, 19, 3, 5, 2, 3, 7],
+                    // backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    // fill: false,
+                    borderColor: '#fff',
+                    backgroundColor: ['#0054AD', '#0099D2', '#00C8CF'],
+                }]
             },
-            scales: {
-                x: {
-                    grid: {
-                        display: false 
-                    },
-                    ticks: {
-                        display: false 
-                    },
-                    border: {
+            /*
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
                         display: false
+                    },
+                    tooltip: {
+                        enabled: true
                     }
                 },
-                y: {
-                    beginAtZero: true,
-                    grid: {
-                        display: false 
-                    },
-                    ticks: {
-                        display: false 
-                    },
-                    border: {
-                        display: false
-                    }
-                   
-                }
-            }
-        }
-     */
-     options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'bottom',
-                    labels: {
-                           usePointStyle: true,
+                scales: {
+                    x: {
+                        grid: {
+                            display: false 
                         },
-                    padding: 20,  
-                },
-                tooltip: {
-                    enabled: true
-                },
-                datalabels: {
-                    formatter: (value, context) => {
-                        let sum = 0;
-                        const dataArr = context.chart.data.datasets[0].data;
-                        dataArr.forEach(data => {
-                            sum += data;
-                        });
-                        const percentage = (value * 100 / sum).toFixed(2) + "%";
-                        return percentage;
+                        ticks: {
+                            display: false 
+                        },
+                        border: {
+                            display: false
+                        }
                     },
-                    color: '#fff',
-                    font: {
-                        weight: 'bold'
-                    },
-                    anchor: 'center',
-                    align: 'center'
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false 
+                        },
+                        ticks: {
+                            display: false 
+                        },
+                        border: {
+                            display: false
+                        }
+                       
+                    }
                 }
             }
-        }
-    });
+         */
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                        },
+                        padding: 20,
+                    },
+                    tooltip: {
+                        enabled: true
+                    },
+                    datalabels: {
+                        formatter: (value, context) => {
+                            let sum = 0;
+                            const dataArr = context.chart.data.datasets[0].data;
+                            dataArr.forEach(data => {
+                                sum += data;
+                            });
+                            const percentage = (value * 100 / sum).toFixed(2) + "%";
+                            return percentage;
+                        },
+                        color: '#fff',
+                        font: {
+                            weight: 'bold'
+                        },
+                        anchor: 'center',
+                        align: 'center'
+                    }
+                }
+            }
+        });
 
-</script>
+    </script>
 </body>
 
 </html>
