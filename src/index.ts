@@ -11,22 +11,25 @@ const employees = {
   "Bob Brown": "Sales"
 };
 
+const template = {
+  header: 'My EJS Page', footer: 'This is rendered using EJS!',
+}
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
-    res.render('page1', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" , employees });
+    res.render('page1', {...template,  page:"01" , employees });
 });
 app.get('/page2', (req, res) => {
-    res.render('page2', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" });
+    res.render('page2', { ...template , page:"02" });
 });
 app.get('/page3', (req, res) => {
-    res.render('page3', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" });
+    res.render('page3', {...template, page:"03" });
 });
 app.get('/page4', (req, res) => {
-    res.render('page4', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" });
+    res.render('page4', { ...template, page:"04" });
 });
     
 app.get('/cover', (req, res) => {
