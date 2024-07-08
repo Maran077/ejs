@@ -8,6 +8,6 @@
       "forceConsistentCasingInFileNames": true,
       "outDir": "./dist"
     },
-    "include": ["src/**/*.ts", "src/public/viewScripts/page2.js
+    "include": ["src/**/*.ts", "src/public/viewScripts/page2.min.js"],
     "exclude": ["node_modules"]
   }
