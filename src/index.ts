@@ -17,10 +17,16 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
-    res.render('index', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" , employees });
+    res.render('page1', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" , employees });
 });
-app.get('/chart', (req, res) => {
-    res.render('chart', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" });
+app.get('/page2', (req, res) => {
+    res.render('page2', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" });
+});
+app.get('/page3', (req, res) => {
+    res.render('page3', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" });
+});
+app.get('/page4', (req, res) => {
+    res.render('page4', { header: 'My EJS Page', footer: 'This is rendered using EJS!', page:"01" });
 });
     
 app.get('/cover', (req, res) => {
