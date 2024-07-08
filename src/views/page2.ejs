@@ -11,11 +11,15 @@
         padding: 0;
         box-sizing: border-box;
     }
+
     body{
-        height: 842px;
+        display: flex;
+        justify-content: center;
     }
+    
     .body{
-        height: 100%;
+        width: 595px ;
+        height: 842px;
         padding: 4px;
     }
     
@@ -28,10 +32,68 @@
     }
     main{
         height: 94%;
-        display: flex;
+       /* display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 10px;*/
+    }
+    .heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:5px 10px;
+    }
+    
+    .heading h2{      
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .heading p{
+       color: #767680;
+       font-size: .8rem;
+    }
+
+    .heading p span{
+        color:#5B73C4;
+    }
+    
+    .scope-emission h6{   
+        font-size: .7rem;
+        font-weight: 300;
+        margin-bottom: 3px;
+        color: #767680;
+    }
+
+    .emission-value {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    .emission-value span{
+        font-size: .9rem;
+        font-weight: 300;
+    }
+    
+
+    .container{
+        border: 1px #DCE1FF solid;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+        /* 
+        width: 563px; 
+       gap: 10px;
+       */
+        height: 216px;
+        display: flex;
+    }
+
+    .container .right{
+        padding-right: 10px;
+        width: 40%;
+        border-right: 1px #DCE1FF solid ;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     footer{
@@ -39,6 +101,12 @@
         font-size: .6rem;
         border-top: 1px solid #DCE1FF;
         padding: 4px 20px;
+    }
+
+    .scope-header{
+        display: flex;
+        gap: 10px;
+        align-items: center;
     }
 
 </style>
@@ -50,26 +118,72 @@
             </p>
         </header>
         <main>
-            <h1></h1>
-            <div class="container-one">
+            <div class="heading">
+                <h2>01  Emissions by scope</h2>
+                <p>Overall emissions
+                   <span>
+                    <span class="emission-value">
+                        77654.987
+                    </span>
+                        mt CO2e
+                   </span> 
+                </p>
+            </div>
+            <div class="container container-one">
                 <div class="right">
-
+                    <div class="scope-header">
+                        <img src="/assets/scopeicon.png" alt="scopeicon">
+                        <h3>Scope 1</h3>
+                    </div>
+                    <div class="scope-emission">
+                        <h6>Overall emissions</h6>
+                        <p class="emission-value">
+                            77654.987
+                            <span >
+                                mt CO2e
+                            </span>
+                        </p> 
+                         </div>
                 </div>
                 <div class="left-chart">
                     
                 </div>
             </div>
-            <div class="container-two">
+            <div class="container container-two">
                 <div class="right">
-
+                    <div class="scope-header">
+                        <img src="/assets/scopeicon.png" alt="scopeicon">
+                        <h3>Scope 1</h3>
+                    </div>
+                    <div class="scope-emission">
+                        <h6>Overall emissions</h6>
+                        <p class="emission-value">
+                            77654.987
+                            <span >
+                                mt CO2e
+                            </span>
+                        </p> 
+                         </div>
                 </div>
                 <div class="left-chart">
 
                 </div>
             </div>
-            <div class="container-three">
+            <div class="container container-three">
                 <div class="right">
-
+                    <div class="scope-header">
+                        <img src="/assets/scopeicon.png" alt="scopeicon">
+                        <h3>Scope 1</h3>
+                    </div>
+                    <div class="scope-emission">
+                        <h6>Overall emissions</h6>
+                        <p class="emission-value">
+                            77654.987
+                            <span >
+                                mt CO2e
+                            </span>
+                        </p> 
+                         </div>
                 </div>
                 <div class="left-chart">
 

@@ -23,7 +23,34 @@
         background-repeat: no-repeat;
     }
     header img {
-        margin-left: auto;
+        position: absolute;
+        right: 3px;
+        top: 3px;
+    }
+    header{
+        position: relative;
+    }
+    main{
+        position: relative;
+
+    }
+    .container{
+        position: absolute;
+        left: 130px;
+        top: 700px;
+        color: white;
+
+    }
+    .container div{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .container h4{
+           font-weight: 100;
+    }
+    h1 span{
+        font-size: large;
     }
 </style>
 <body>
@@ -32,7 +59,14 @@
            <img src="/assets/ClimeUp.png" alt="logo">
      </header>
      <main>
-
+        <div class="container">
+            <div>
+              <img src="/assets/comlogo.png" alt="">
+             <h6>Fluid Dynamics, LLC</h6>
+            </div>
+            <h1>ESG Report <span>2023-24</span></h1>
+            <h4>Action for a sustainable future</h4>
+        </div>
      </main>
     </div>
 </body>

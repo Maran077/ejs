@@ -12,11 +12,41 @@
         box-sizing: border-box;
     }
     body{
-        height: 842px;
+        /*
+        */
+        display: flex;
+        justify-content: center;
     }
+
     .body{
-        height: 100%;
+        width: 595px ;
+        height: 842px;
         padding: 4px;
+    }
+
+    .heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:5px 10px;
+    }
+    
+    .heading h2{      
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    .heading p{
+       color: #767680;
+       font-size: .8rem;
+    }
+
+    .heading p span{
+        color:#5B73C4;
+    }
+
+    .emission-value {
+        font-size: 1.4rem;
+        font-weight: 600;
     }
     
     header{
@@ -28,10 +58,7 @@
     }
     main{
         height: 94%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+       
     }
 
     footer{
@@ -39,6 +66,14 @@
         font-size: .6rem;
         border-top: 1px solid #DCE1FF;
         padding: 4px 20px;
+    }
+
+    .title h3{
+        font-size: 1.2rem;
+    }
+    .title p{
+        font-size: 1rem;
+        color: #00A575;
     }
 
 </style>
@@ -51,16 +86,38 @@
         </header>
         <main>
             <div class="heading">
-
+                <h2>01  Emissions by scope</h2>
+                <p>Overall emissions
+                   <span>
+                    <span class="emission-value">
+                        77654.987
+                    </span>
+                        mt CO2e
+                   </span> 
+                </p>
             </div>
-            <div class="container-one">
+            <div class="container container-one">
+                <div class="chart-des" >
+                  <div class="title">
+                      <h3>Emissions by facilities</h3>
+                      <p>Fluid dynamics accounts for 10% of total emissions.</p>
+                  </div>
+                  <div class="emission-values">
+                    <div class="emission">
+
+                    </div>
+                    <div class="emission">
+                        
+                    </div>
+                  </div>
+                </div>
             <div class="chart">
 
             </div>
         </div>
-        <div class="container-two">
+        <div class="container container-two">
              <div class="chart">
-                
+
              </div>
         </div>
         </main>
