@@ -1,12 +1,17 @@
+// data1Received is ----- ScopeWiseDistribution data 
+
+
 const ctx = document.getElementById("myChart").getContext("2d");
 const myChart = new Chart(ctx, {
     type: "doughnut",
     data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        labels: ['Scope 1', 'Scope 2', 'Scope 3'],
         datasets: [
             {
-                label: "Scope 1",
-                data: [12, 19, 3, 5, 2, 3, 7],
+                label: '# of Scope',
+                data: [data1Recived?.scope1, data1Recived?.scope2, data1Recived?.scope3],
+                backgroundColor: ['#0054AD', '#0099D2', '#00C8CF'],
+                borderWidth: 1,
             },
         ],
     },
@@ -15,7 +20,7 @@ const myChart = new Chart(ctx, {
         maintainAspectRatio: false,
         plugins: {
             legend: {
-                position: 'right',
+                position: 'down',
 
             },
         },
