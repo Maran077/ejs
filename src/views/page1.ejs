@@ -1,121 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    body {
-        height: 842px;
-    }
+  body {
+    height: 842px;
+  }
 
-    .body {
-        height: 100%;
-        padding: 4px;
-    }
+  .body {
+    height: 100%;
+    padding: 4px;
+  }
 
-    header {
-        height: 3%;
-        border-bottom: 2px solid #DCE1FF;
-        font-size: .6rem;
-        text-align: end;
-        padding: 4px 20px;
-    }
+  header {
+    height: 3%;
+    border-bottom: 2px solid #dce1ff;
+    font-size: 0.6rem;
+    text-align: end;
+    padding: 4px 20px;
+  }
 
-    main {
-        height: 94%;
-        /*
+  main {
+    height: 94%;
+    /*
         justify-content: center; 
         */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-    .report {
-        width: 50%;
-        text-align: center;
+  .report {
+    width: 50%;
+    text-align: center;
+  }
 
+  .report table {
+    width: 100%;
+  }
 
-    }
+  .chart {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-    .report table {
-        width: 100%;
-    }
+  footer {
+    height: 3%;
+    font-size: 0.6rem;
+    border-top: 2px solid #dce1ff;
+    padding: 4px 20px;
+  }
 
-    .chart {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    footer {
-        height: 3%;
-        font-size: .6rem;
-        border-top: 2px solid #DCE1FF;
-        padding: 4px 20px;
-    }
-
-    td {
-        text-align: start;
-        padding: 5px 10px;
-    }
+  td {
+    text-align: start;
+    padding: 5px 10px;
+  }
 </style>
+<main>
+  <div class="report">
+    <h2>Sustainability report</h2>
 
-<body>
-    <div class="body">
-        <header>
-            <p>
-                Fluid Dyanamics . Inc
-            </p>
-        </header>
-        <main>
-            <div class="report">
-                <h2>Sustainability report</h2>
+    <table>
+      <% for(let name in employees) { %>
+      <tr>
+        <td><%= name %></td>
+        <td><%= employees[name] %></td>
+      </tr>
+      <% } %>
+    </table>
+  </div>
+  <div class="chart">
+    <h3>Overall emissions by scope for 01-Jan-2023 to 01-Dec-2023</h3>
+    <p><span> 77654.987 </span> mt CO2e</p>
+    <canvas id="myChart"></canvas>
+  </div>
+  <div>I am temp bro</div>
+  <div><canvas id="temp"></canvas></div>
+  <br />
+</main>
 
-                <table>
-                    <% for(let name in employees) { %>
-                        <tr>
-                            <td>
-                                <%= name %>
-                            </td>
-                            <td>
-                                <%= employees[name] %>
-                            </td>
-
-                        </tr>
-                        <% } %>
-                </table>
-            </div>
-            <div class="chart">
-                <h3>Overall emissions by scope for 01-Jan-2023 to 01-Dec-2023</h3>
-                <p> <span>
-                        77654.987
-                    </span>
-                    mt CO2e</p>
-                <canvas id="myChart"></canvas>
-            </div>
-            <div> I am temp bro </div>
-            <div><canvas id="temp"></canvas></div>
-            <br />
-        </main>
-        <footer>
-            ESG report 2022-2023
-            climeup.ai
-        </footer>
-    </div>
-    <script type="module" src="/viewScripts/page2.js"></script>
-    <!--
+<script type="module" src="/viewScripts/page2.js"></script>
+<!--
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
@@ -213,6 +183,3 @@
 
     </script>
     -->
-</body>
-
-</html>

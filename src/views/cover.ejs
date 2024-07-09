@@ -1,73 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Roboto;
+      letter-spacing: 1.4px;
     }
-    body{
-        display: flex;
-        justify-content: center;
-
+    body {
+      display: flex;
+      justify-content: center;
     }
-    .body{
-        background-image:url("/assets/background.png") ;
-        width: 595px;
-        height: 842px;    
-        background-repeat: no-repeat;
+    .body {
+      background-image: url('/assets/background.png');
+      width: 595px;
+      height: 842px;
+      background-repeat: no-repeat;
     }
     header img {
-        position: absolute;
-        right: 3px;
-        top: 3px;
+      position: absolute;
+      right: 3px;
+      top: 3px;
     }
-    header{
-        position: relative;
+    header {
+      position: relative;
     }
-    main{
-        position: relative;
+    main {
+      position: relative;
+    }
+    .container {
+      position: absolute;
+      left: 130px;
+      top: 530px;
+      color: white;
+    }
+    .container div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .container h4 {
+      font-weight: 300;
+      font-size: 16px;
+    }
 
+    h1 {
+      font-size: 48px;
     }
-    .container{
-        position: absolute;
-        left: 130px;
-        top: 700px;
-        color: white;
 
+    h1 span {
+      font-size: 32px;
+      font-weight: 500;
     }
-    .container div{
-        display: flex;
-        gap: 10px;
-        align-items: center;
+    .company-logo {
+      width: 20px;
+      height: 20px;
     }
-    .container h4{
-           font-weight: 100;
-    }
-    h1 span{
-        font-size: large;
-    }
-</style>
-<body>
+  </style>
+  <body>
     <div class="body">
-     <header>
-           <img src="/assets/ClimeUp.png" alt="logo">
-     </header>
-     <main>
+      <header>
+        <img src="/assets/ClimeUp.png" alt="logo" />
+      </header>
+      <main>
         <div class="container">
-            <div>
-              <img src="/assets/comlogo.png" alt="">
-             <h6>Fluid Dynamics, LLC</h6>
-            </div>
-            <h1>ESG Report <span>2023-24</span></h1>
-            <h4>Action for a sustainable future</h4>
+          <div>
+            <img
+              class="company-logo"
+              src="/assets/comlogo.png"
+              alt="company-logo"
+            />
+            <h6>Fluid Dynamics, LLC</h6>
+          </div>
+          <h1>ESG Report <span>2023-24</span></h1>
+          <h4>Action for a sustainable future</h4>
         </div>
-     </main>
+      </main>
     </div>
-</body>
+  </body>
 </html>

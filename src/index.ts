@@ -20,9 +20,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.get("/page1", (req, res) => {
-  res.render("page1", { ...template, page: "01", employees });
+app.get("/cover", (req, res) => {
+  res.render("cover");
 });
+
+app.get("/:page", (req, res) => {
+  const { page } = req.params
+  res.render("layout", { ...template, page , employees });
+});
+/*
 app.get("/page2", (req, res) => {
   res.render("page2", { ...template, page: "02" });
 });
@@ -41,10 +47,10 @@ app.get("/page6", (req, res) => {
 app.get("/page7", (req, res) => {
   res.render("page7", { ...template, page: "07" });
 });
-
-app.get("/cover", (req, res) => {
-  res.render("cover");
+app.get("/page8", (req, res) => {
+  res.render("page8", { ...template, page: "07" });
 });
+*/
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
