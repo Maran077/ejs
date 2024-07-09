@@ -19,193 +19,222 @@
     }
 
     .body {
-      width: 595px;
-      height: 842px;
-      padding: 4px;
+        width: 595px;
+        height: 842px;
+        padding: 4px;
     }
 
     .heading {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 10px;
     }
 
     .heading h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
+        font-size: 1.2rem;
+        font-weight: 700;
     }
+
     .heading p {
-      color: #767680;
-      font-size: 0.8rem;
+        color: #767680;
+        font-size: .8rem;
     }
 
     .heading p span {
-      color: #5b73c4;
+        color: #5B73C4;
     }
 
     .emission-value {
-      font-size: 1.4rem;
-      font-weight: 600;
+        font-size: 1.4rem;
+        font-weight: 600;
     }
 
     header {
-      height: 3%;
-      border-bottom: 1px solid #dce1ff;
-      font-size: 0.6rem;
-      text-align: end;
-      padding: 4px 20px;
+        height: 3%;
+        border-bottom: 1px solid #DCE1FF;
+        font-size: .6rem;
+        text-align: end;
+        padding: 4px 20px;
     }
+
     main {
-      height: 94%;
+        height: 94%;
+
     }
 
     .container {
-      border: 1px #dce1ff solid;
-      border-radius: 10px;
-      padding: 10px;
-      margin-top: 10px;
+        border: 1px #DCE1FF solid;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
     }
 
     .chart-des {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     footer {
-      height: 3%;
-      font-size: 0.6rem;
-      border-top: 1px solid #dce1ff;
-      padding: 4px 20px;
+        height: 3%;
+        font-size: .6rem;
+        border-top: 1px solid #DCE1FF;
+        padding: 4px 20px;
     }
 
     .title h3 {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
     }
 
     .title p {
-      font-size: 1rem;
-      color: #00a575;
+        font-size: 1rem;
+        color: #00A575;
     }
 
     .emission-values {
-      display: flex;
-      gap: 10px;
+        display: flex;
+        gap: 10px;
     }
 
     .emission {
-      background-color: #f6feff;
-      padding: 5px;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      width: 250px;
+        background-color: #F6FEFF;
+        padding: 5px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 250px;
     }
 
     .emission h6 {
-      font-size: 0.7rem;
-      color: #767680;
+        font-size: .7rem;
+        color: #767680;
     }
 
     .emission-des {
-      display: flex;
-      gap: 7px;
+        display: flex;
+        gap: 7px;
     }
 
     .emission-title {
-      display: flex;
-      gap: 4px;
-      padding-right: 2px;
-      align-items: center;
-      border-right: 1px solid #dce1ff;
+        display: flex;
+        gap: 4px;
+        padding-right: 2px;
+        align-items: center;
+        border-right: 1px solid #DCE1FF;
     }
 
     .emission-title p {
-      font-size: 0.7rem;
+        font-size: .7rem;
     }
 
     .emission-title img {
-      border: #767680 solid 0.4px;
-      border-radius: 50%;
-      padding: 2px;
-      background-color: white;
+        border: #767680 solid .4px;
+        border-radius: 50%;
+        padding: 2px;
+        background-color: white;
     }
+
     .emission-value h6 {
-      font-size: 1rem;
-      color: black;
+        font-size: 1rem;
+        color: black;
     }
+
     .emission-value p {
-      font-size: 0.35rem;
+        font-size: .35rem;
     }
-  </style>
-  <body>
+</style>
+
+<body>
     <div class="body">
-      <header>
-        <p>Fluid Dyanamics . Inc</p>
-      </header>
-      <main>
-        <div class="heading">
-          <h2>01 Emissions by scope</h2>
-          <p>
-            Overall emissions
-            <span>
-              <span class="emission-value"> 77654.987 </span>
-              mt CO2e
-            </span>
-          </p>
-        </div>
-        <div class="container container-one">
-          <div class="chart-des">
-            <div class="title">
-              <h3>Emissions by facilities</h3>
-              <p>Fluid dynamics accounts for 10% of total emissions.</p>
+        <header>
+            <p>
+                Fluid Dyanamics . Inc
+            </p>
+        </header>
+        <main>
+            <div class="heading">
+                <h2>01 Emissions by scope</h2>
+                <p>Overall emissions
+                    <span>
+                        <span class="emission-value">
+                            77654.987
+                        </span>
+                        mt CO2e
+                    </span>
+                </p>
             </div>
-          </div>
-          <div class="chart"></div>
-        </div>
-        <div class="container container-two">
-          <div class="chart-des">
-            <div class="title">
-              <h3>Emissions by facilities</h3>
-              <p>Fluid dynamics accounts for 10% of total emissions.</p>
-            </div>
-            <div class="emission-values">
-              <div class="emission">
-                <h6>Highest emissions</h6>
-                <div class="emission-des">
-                  <div class="emission-title">
-                    <img src="/assets/emissionlogo.png" alt="emission-logo" />
-                    <p>Darwintech manufacturing private Ltd</p>
-                  </div>
-                  <div class="emission-value">
-                    <h6>810</h6>
-                    <p>Mt CO2</p>
-                  </div>
+            <div class="container container-one">
+                <div class="chart-des">
+                    <div class="title">
+                        <h3>Emissions by facilities</h3>
+                        <p>Fluid dynamics accounts for 10% of total emissions.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="emission">
-                <h6>Lowest emissions</h6>
-                <div class="emission-des">
-                  <div class="emission-title">
-                    <img src="/assets/emissionlogo.png" alt="emission-logo" />
-                    <p>Darwintech manufacturing private Ltd</p>
-                  </div>
-                  <div class="emission-value">
-                    <h6>810</h6>
-                    <p>Mt CO2</p>
-                  </div>
+                <div class="chart">
+                    <div style="height: 102px">
+                        <canvas id="pie1"></canvas>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="chart"></div>
-        </div>
-      </main>
-      <footer>ESG report 2022-2023 climeup.ai</footer>
+            <div class="container container-two">
+                <div class="chart-des">
+                    <div class="title">
+                        <h3>Emissions by facilities</h3>
+                        <p>Fluid dynamics accounts for 10% of total emissions.</p>
+                    </div>
+                    <div class="emission-values">
+                        <div class="emission">
+                            <h6>Highest emissions</h6>
+                            <div class="emission-des">
+                                <div class="emission-title">
+                                    <img src="/assets/emissionlogo.png" alt="emission-logo">
+                                    <p>Darwintech manufacturing
+                                        private Ltd</p>
+                                </div>
+                                <div class="emission-value">
+                                    <h6>810</h6>
+                                    <p>
+                                        Mt CO2
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emission">
+                            <h6>Lowest emissions</h6>
+                            <div class="emission-des">
+                                <div class="emission-title">
+                                    <img src="/assets/emissionlogo.png" alt="emission-logo">
+                                    <p>Darwintech manufacturing
+                                        private Ltd</p>
+                                </div>
+                                <div class="emission-value">
+                                    <h6>810</h6>
+                                    <p>
+                                        Mt CO2
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart">
+                    <div height="288px" width="336px">
+                        <canvas id="bar"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            ESG report 2022-2023
+            climeup.ai
+        </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-  </body>
+    <script src="/viewScripts/chart.js"></script>
+    <script src="/viewScripts/page4.js"></script>
+
+</body>
+
 </html>
