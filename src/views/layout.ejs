@@ -46,11 +46,10 @@
       justify-content: space-between;
       align-items: center;
     }
-    footer p{
+    footer p {
       font-size: 0.6rem;
-
     }
-    .page-num{
+    .page-num {
       font-size: 0.7rem;
       font-weight: 700;
     }
@@ -63,12 +62,9 @@
       </header>
       <% const dynamicPage = "page"+page; %> <%- include(dynamicPage) %>
       <footer>
-        <p>
-          ESG report 2022-2023 climeup.ai
-        </p>
+        <p>ESG report 2022-2023 climeup.ai</p>
         <p class="page-num">
-          <% const num = parseInt(page) > 9 ? page : `0${page}`   %>
-          <%= num %> 
+          <% const num = parseInt(page) > 9 ? page : `0${page}` %> <%= num %>
         </p>
       </footer>
     </div>
