@@ -1,0 +1,35 @@
+<style>
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    width: 100%;
+  }
+
+  .heading h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .heading p {
+    color: #767680;
+    font-size: 0.8rem;
+  }
+
+  .heading p span {
+    color: #5b73c4;
+  }
+</style>
+
+<div class="heading">
+  <h2>01 Emissions by scope</h2>
+  <% if(typeof hideEmission === 'undefined' || !hideEmission ){ %>
+  <p>
+    Overall emissions
+    <span>
+      <span class="emission-value"> 77654.987 </span>
+      mt CO2e
+    </span>
+  </p>
+  <% } %>
+</div>

@@ -1,124 +1,13 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      /*
-        */
-      display: flex;
-      justify-content: center;
-    }
-
-    .body {
-      width: 595px;
-      height: 842px;
-      padding: 4px;
-    }
-
-    .heading {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 5px 10px;
-    }
-
-    .heading h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-    .heading p {
-      color: #767680;
-      font-size: 0.8rem;
-    }
-
-    .heading p span {
-      color: #5b73c4;
-    }
-
-    .emission-value {
-      font-size: 0.6rem;
-      font-weight: 600;
-    }
-
-    header {
-      height: 3%;
-      border-bottom: 1px solid #dce1ff;
-      font-size: 0.6rem;
-      text-align: end;
-      padding: 4px 20px;
-    }
-    main {
-      height: 94%;
-    }
-
-    .container {
-      border: 1px #dce1ff solid;
-      border-radius: 10px;
-      padding: 14px 10px 10px 10px;
-      margin-top: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-    }
-
-    footer {
-      height: 3%;
-      font-size: 0.6rem;
-      border-top: 1px solid #dce1ff;
-      padding: 4px 20px;
-    }
-
-    .emission-des {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    .emission-des h6 {
-      font-size: 0.8rem;
-      font-weight: 400;
-    }
-
-    button {
-      font-size: 0.5rem;
-      background-color: #4d88c6;
-      padding: 10px;
-      border-radius: 10px;
-      outline: none;
-      border: none;
-      display: flex;
-      align-items: center;
-      gap: 3px;
-      color: white;
-    }
-  </style>
-  <body>
-    <div class="body">
-      <header>
-        <p>Fluid Dyanamics . Inc</p>
-      </header>
-      <main>
-        <div class="heading">
-          <h2>01 Emissions by scope</h2>
-        </div>
-        <div class="container container-one">
+<main>
+    <div style="width: 100%;" >
+        <%- include("./component/heading" , { hideEmission:true } ) %>
+        <div class="container ">
           <h3>Scope 1</h3>
           <div class="emission-des">
             <h6>6789.8 mtCO2e</h6>
             <p>Stationary</p>
           </div>
           <div class="emission-des">
-            <h6>6789.8 mtCO2e</h6>
-            <p>Stationary</p>
             <h6>6789.8 mtCO2e</h6>
             <p>Stationary</p>
           </div>
@@ -131,10 +20,175 @@
             <span class="emission-value"> 77654.987 mt CO2e </span>
           </button>
         </div>
-      </main>
-      <footer>ESG report 2022-2023 climeup.ai</footer>
+        <div class="container ">
+          <h3>Scope 1</h3>
+          <div class="emission-des">
+            <h6>6789.8 mtCO2e</h6>
+            <p>Stationary</p>
+          </div>
+          <div class="emission-des">
+            <h6>6789.8 mtCO2e</h6>
+            <p>Stationary</p>
+          </div>
+          <div class="emission-des">
+            <h6>6789.8 mtCO2e</h6>
+            <p>Stationary</p>
+          </div>
+          <button>
+            <p>Overall</p>
+            <span class="emission-value"> 77654.987 mt CO2e </span>
+          </button>
+        </div>
+        <div class="container ">
+          <h3>Scope 1</h3>
+          <div class="emission-des">
+            <h6>6789.8 mtCO2e</h6>
+            <p>Stationary</p>
+          </div>
+          <div class="emission-des">
+            <h6>6789.8 mtCO2e</h6>
+            <p>Stationary</p>
+          </div>
+          <div class="emission-des">
+            <h6>6789.8 mtCO2e</h6>
+            <p>Stationary</p>
+          </div>
+          <button>
+            <p>Overall</p>
+            <span class="emission-value"> 77654.987 mt CO2e </span>
+          </button>
+        </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-  </body>
-</html>
+    <!--
+        <div style="width: 100%;" >
+            <%- include("./component/heading") %>
+            <div class="container ">
+              <h3>Scope 1</h3>
+              <div class="emission-des">
+                <h6>6789.8 mtCO2e</h6>
+                <p>Stationary</p>
+              </div>
+              <div class="emission-des">
+                <h6>6789.8 mtCO2e</h6>
+                <p>Stationary</p>
+              </div>
+              <div class="emission-des">
+                <h6>6789.8 mtCO2e</h6>
+                <p>Stationary</p>
+              </div>
+              <button>
+                <p>Overall</p>
+                <span class="emission-value"> 77654.987 mt CO2e </span>
+              </button>
+            </div>
+            <div class="container ">
+              <h3>Scope 1</h3>
+              <div class="emission-des">
+                <h6>6789.8 mtCO2e</h6>
+                <p>Stationary</p>
+              </div>
+              <div class="emission-des">
+                <h6>6789.8 mtCO2e</h6>
+                <p>Stationary</p>
+              </div>
+              <div class="emission-des">
+                <h6>6789.8 mtCO2e</h6>
+                <p>Stationary</p>
+              </div>
+              <button>
+                <p>Overall</p>
+                <span class="emission-value"> 77654.987 mt CO2e </span>
+              </button>
+            </div>
+            <div class="container ">
+              <h3>Scope 1</h3>
+              <div class="emission-des">
+                <h6>6789.8 mtCO2e</h6>
+                <p>Stationary</p>
+              </div>
+              <div class="emission-des">
+                <h6>6789.8 mtCO2e</h6>
+                <p>Stationary</p>
+              </div>
+              <div class="emission-des">
+                <h6>6789.8 mtCO2e</h6>
+                <p>Stationary</p>
+              </div>
+              <button>
+                <p>Overall</p>
+                <span class="emission-value"> 77654.987 mt CO2e </span>
+              </button>
+            </div>
+        </div>
+
+    -->
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+  }
+
+
+  .emission-value {
+    font-size: 0.6rem;
+    font-weight: 600;
+  }
+
+  main {
+    height: 94%;
+  }
+
+  .container {
+    width: 100%;
+    border: 1px #dce1ff solid;
+    border-radius: 10px;
+    padding: 24px 20px ;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  footer {
+    height: 3%;
+    font-size: 0.6rem;
+    border-top: 1px solid #dce1ff;
+    padding: 4px 20px;
+  }
+
+  .emission-des {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .emission-des h6 {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .emission-des p {
+    font-size: .7rem;
+    font-weight: 300;
+  }
+
+  button {
+    font-size: 0.5rem;
+    background-color: #4d88c6;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: white;
+  }
+</style>

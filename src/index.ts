@@ -4,12 +4,14 @@ import path from "path";
 const app = express();
 const port = 3000;
 
-const employees = {
-  "John Doe": "Manager",
-  "Jane Smith": "Developer",
-  "Alice Johnson": "Designer",
-  "Bob Brown": "Sales",
+const facilityData = {
+  FacilityName: "Fluid Dynamics Inc",
+  Location: "14/63, 7th Main Street, New York-0999876",
+  TotalEmployees: 1735,
+  Assets: 1290,
+  Suppliers: 75
 };
+
 
 const template = {
   header: "My EJS Page",
@@ -26,7 +28,7 @@ app.get("/cover", (req, res) => {
 
 app.get("/:page", (req, res) => {
   const { page } = req.params
-  res.render("layout", { ...template, page , employees });
+  res.render("layout", { ...template, page , facilities:facilityData });
 });
 /*
 app.get("/page2", (req, res) => {

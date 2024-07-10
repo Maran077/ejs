@@ -1,170 +1,134 @@
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<main>
+  <%- include("./component/heading") %>
+  <div class="container container-one">
+    <div class="right">
+      <div class="scope-header">
+        <img src="/assets/scopeicon.png" alt="scopeicon" />
+        <h3>Scope 1</h3>
+      </div>
+      <div class="scope-emission">
+        <h6>Overall emissions</h6>
+        <p class="emission-value">
+          77654.987
+          <span> mt CO2e </span>
+        </p>
+      </div>
+    </div>
+    <div class="left-chart">
+      <div height="288px" width="336px">
+        <canvas id="bar1"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="container container-two">
+    <div class="right">
+      <div class="scope-header">
+        <img src="/assets/scopeicon.png" alt="scopeicon" />
+        <h3>Scope 1</h3>
+      </div>
+      <div class="scope-emission">
+        <h6>Overall emissions</h6>
+        <p class="emission-value">
+          77654.987
+          <span> mt CO2e </span>
+        </p>
+      </div>
+    </div>
+    <div class="left-chart">
+      <div height="288px" width="336px">
+        <canvas id="bar2"></canvas>
+      </div>
+    </div>
+  </div>
+  <div class="container container-three">
+    <div class="right">
+      <div class="scope-header">
+        <img src="/assets/scopeicon.png" alt="scopeicon" />
+        <h3>Scope 1</h3>
+      </div>
+      <div class="scope-emission">
+        <h6>Overall emissions</h6>
+        <p class="emission-value">
+          77654.987
+          <span> mt CO2e </span>
+        </p>
+      </div>
+    </div>
+    <div class="left-chart">
+      <div height="288px" width="336px">
+        <canvas id="bar3"></canvas>
+      </div>
+    </div>
+  </div>
+</main>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+  }
 
-    main {
-      height: 94%;
-      /* display: flex;
+  main {
+    height: 94%;
+    /*
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;*/
-    }
-    .heading {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 5px 10px;
-    }
+        gap: 20px; 
+          */
+  }
 
-    .heading h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
-    }
-    .heading p {
-      color: #767680;
-      font-size: 0.8rem;
-    }
+  .scope-emission h6 {
+    font-size: 0.7rem;
+    font-weight: 300;
+    margin-bottom: 3px;
+    color: #767680;
+  }
 
-    .heading p span {
-      color: #5b73c4;
-    }
+  .emission-value {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .emission-value span {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
 
-    .scope-emission h6 {
-      font-size: 0.7rem;
-      font-weight: 300;
-      margin-bottom: 3px;
-      color: #767680;
-    }
+  .container {
+    border: 1px #dce1ff solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    /* 
+          width: 563px; 
+         gap: 10px;
+         */
+    height: 216px;
+    display: flex;
+  }
 
-    .emission-value {
-      font-size: 1.4rem;
-      font-weight: 600;
-    }
-    .emission-value span {
-      font-size: 0.9rem;
-      font-weight: 300;
-    }
+  .container .right {
+    padding-right: 10px;
+    width: 40%;
+    border-right: 1px #dce1ff solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-    .container {
-      border: 1px #dce1ff solid;
-      border-radius: 10px;
-      padding: 10px;
-      margin-top: 10px;
-      /* 
-        width: 563px; 
-       gap: 10px;
-       */
-      height: 216px;
-      display: flex;
-    }
+  .scope-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 
-    .container .right {
-      padding-right: 10px;
-      width: 40%;
-      border-right: 1px #dce1ff solid;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .scope-header {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .scope-header {
-        display: flex;
-        gap: 10px;
-        align-items: center;
-    }
+  .scope-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 </style>
-
-
-        <main>
-            <div class="heading">
-                <h2>01 Emissions by scope</h2>
-                <p>Overall emissions
-                    <span>
-                        <span class="emission-value">
-                            77654.987
-                        </span>
-                        mt CO2e
-                    </span>
-                </p>
-            </div>
-            <div class="container container-one">
-                <div class="right">
-                    <div class="scope-header">
-                        <img src="/assets/scopeicon.png" alt="scopeicon">
-                        <h3>Scope 1</h3>
-                    </div>
-                    <div class="scope-emission">
-                        <h6>Overall emissions</h6>
-                        <p class="emission-value">
-                            77654.987
-                            <span>
-                                mt CO2e
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="left-chart">
-                    <div height="288px" width="336px" >
-                        <canvas id="bar1"></canvas>
-                    </div>
-
-                </div>
-            </div>
-            <div class="container container-two">
-                <div class="right">
-                    <div class="scope-header">
-                        <img src="/assets/scopeicon.png" alt="scopeicon">
-                        <h3>Scope 1</h3>
-                    </div>
-                    <div class="scope-emission">
-                        <h6>Overall emissions</h6>
-                        <p class="emission-value">
-                            77654.987
-                            <span>
-                                mt CO2e
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="left-chart">
-                    <div height="288px" width="336px" >
-                        <canvas id="bar2"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="container container-three">
-                <div class="right">
-                    <div class="scope-header">
-                        <img src="/assets/scopeicon.png" alt="scopeicon">
-                        <h3>Scope 1</h3>
-                    </div>
-                    <div class="scope-emission">
-                        <h6>Overall emissions</h6>
-                        <p class="emission-value">
-                            77654.987
-                            <span>
-                                mt CO2e
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <div class="left-chart">
-                    <div height="288px" width="336px" >
-                        <canvas id="bar3"></canvas>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-
-    <script src="/viewScripts/chart.js"></script>
-    <script src="/viewScripts/page2.js"></script>
+<script src="/viewScripts/chart.js"></script>
+<script src="/viewScripts/page2.js"></script>

@@ -1,8 +1,28 @@
+<main>
+  <div class="report">
+    <h2>Sustainability report</h2>
+
+    <table>
+      <% for(let name in facilities) { %>
+      <tr>
+        <td><%= name %></td>
+        <td class="table-value"><%= facilities[name] %></td>
+      </tr>
+      <% } %>
+    </table>
+  </div>
+  <div class="chart">
+    <h3>Overall emissions by scope for 01-Jan-2023 to 01-Dec-2023</h3>
+    <p><span> 77654.987 </span> mt CO2e</p>
+    <canvas id="myChart"></canvas>
+  </div>
+</main>
 <style>
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: roboto;
   }
 
   body {
@@ -25,12 +45,12 @@
   main {
     height: 94%;
     /*
-        justify-content: center; 
-        */
+          justify-content: center; 
+          */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
   }
 
   .report {
@@ -40,6 +60,7 @@
 
   .report table {
     width: 100%;
+    margin-left: 100px;
   }
 
   .chart {
@@ -47,6 +68,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 10px;
+    border: #dce1ff solid 1.3px;
   }
 
   footer {
@@ -59,36 +82,37 @@
   td {
     text-align: start;
     padding: 5px 10px;
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  h2 {
+    margin-block: 10px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  p span {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    color: #5b73c4;
+  }
+  p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .table-value {
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 14px;
+    font-weight: 600;
   }
 </style>
-<main>
-  <div class="report">
-    <h2>Sustainability report</h2>
-
-    <table>
-      <% for(let name in employees) { %>
-      <tr>
-        <td><%= name %></td>
-        <td><%= employees[name] %></td>
-      </tr>
-      <% } %>
-    </table>
-  </div>
-  <div class="chart">
-    <h3>Overall emissions by scope for 01-Jan-2023 to 01-Dec-2023</h3>
-    <p><span> 77654.987 </span> mt CO2e</p>
-    <canvas id="myChart"></canvas>
-  </div>
-  <div>I am temp bro</div>
-  <div><canvas id="temp"></canvas></div>
-  <br />
-</main>
-
 <script type="module" src="/viewScripts/page2.js"></script>
 <!--
-
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
 
 
     <script>

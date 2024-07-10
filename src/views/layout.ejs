@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>climeup</title>
   </head>
   <style>
     * {
@@ -39,9 +39,20 @@
 
     footer {
       height: 3%;
-      font-size: 0.6rem;
       border-top: 2px solid #dce1ff;
       padding: 4px 20px;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer p{
+      font-size: 0.6rem;
+
+    }
+    .page-num{
+      font-size: 0.7rem;
+      font-weight: 700;
     }
   </style>
 
@@ -51,7 +62,15 @@
         <p>Fluid Dyanamics . Inc</p>
       </header>
       <% const dynamicPage = "page"+page; %> <%- include(dynamicPage) %>
-      <footer>ESG report 2022-2023 climeup.ai</footer>
+      <footer>
+        <p>
+          ESG report 2022-2023 climeup.ai
+        </p>
+        <p class="page-num">
+          <% const num = parseInt(page) > 9 ? page : `0${page}`   %>
+          <%= num %> 
+        </p>
+      </footer>
     </div>
   </body>
 </html>
