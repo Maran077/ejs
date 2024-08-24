@@ -13,15 +13,15 @@
     }
 
     body {
-      height: 842px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    
+
     .body {
+      height: 842px;
       width: 595px;
-      height: 100%;
+      /* height: 100%; */
       padding: 4px;
     }
 
@@ -50,27 +50,39 @@
       justify-content: space-between;
       align-items: center;
     }
+
     footer p {
       font-size: 0.6rem;
     }
+
     .page-num {
       font-size: 0.7rem;
       font-weight: 700;
     }
+    #full-page {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 
-  <body>
+  <body id="full-page">
+    <%- include("covertemp") %> 
+    <% for(let i = 1; i <= 8 ; i++) { %>
     <div class="body">
       <header>
-        <p>Fluid Dyanamics . Inc</p>
+        <p>Fluid Dynamics Inc.</p>
       </header>
-      <% const dynamicPage = "page"+page; %> <%- include(dynamicPage) %>
+      <% const dynamicPage = "page" + i; %> <%- include(dynamicPage) %>
       <footer>
         <p>ESG report 2022-2023 climeup.ai</p>
         <p class="page-num">
-          <% const num = parseInt(page) > 9 ? page : `0${page}` %> <%= num %>
+          <% const num = i < 10 ? '0' + i : i + 1; %> <%= num %>
         </p>
       </footer>
     </div>
+    <% } %>
   </body>
 </html>

@@ -1,60 +1,61 @@
-<main>
+<main id="main-page-4">
   <%- include("./component/heading") %>
-  <div class="container container-one">
-    <div class="chart-des">
-      <div class="title">
-        <h3>Emissions by facilities</h3>
-        <p>Fluid dynamics accounts for 10% of total emissions.</p>
+  <div class="container container-one" id="container-one-page-4">
+    <div class="chart-des" id="chart-des-one-page-4">
+      <div class="title" id="title-one-page-4">
+        <h3 id="h3-one-page-4">Emissions by facilities</h3>
+        <p id="p-one-page-4">Fluid dynamics accounts for 10% of total emissions.</p>
       </div>
     </div>
-    <div class="chart">
+    <div class="chart" id="chart-one-page-4">
       <div style="height: 102px">
-        <canvas id="pie1"></canvas>
+        <canvas id="pie1-page-4"></canvas>
       </div>
     </div>
   </div>
-  <div class="container container-two">
-    <div class="chart-des">
-      <div class="title">
-        <h3>Emissions by facilities</h3>
-        <p>Fluid dynamics accounts for 10% of total emissions.</p>
+  <div class="container container-two" id="container-two-page-4">
+    <div class="chart-des" id="chart-des-two-page-4">
+      <div class="title" id="title-two-page-4">
+        <h3 id="h3-two-page-4">Emissions by facilities</h3>
+        <p id="p-two-page-4">Fluid dynamics accounts for 10% of total emissions.</p>
       </div>
-      <div class="emission-values">
-        <div class="emission">
-          <h6>Highest emissions</h6>
-          <div class="emission-des">
-            <div class="emission-title">
+      <div class="emission-values" id="emission-values-page-4">
+        <div class="emission" id="emission-high-page-4">
+          <h6 id="highest-emission-title-page-4">Highest emissions</h6>
+          <div class="emission-des" id="emission-des-high-page-4">
+            <div class="emission-title" id="emission-title-high-page-4">
               <img src="/assets/emissionlogo.png" alt="emission-logo" />
-              <p>Darwintech manufacturing private Ltd</p>
+              <p id="emission-facility-high-page-4">Darwintech Manufacturing Private Ltd</p>
             </div>
-            <div class="emission-value">
-              <h6>810</h6>
+            <div class="emission-value" id="emission-value-high-page-4">
+              <h6 id="emission-value-high-value-page-4">810</h6>
               <p>Mt CO2</p>
             </div>
           </div>
         </div>
-        <div class="emission">
-          <h6>Lowest emissions</h6>
-          <div class="emission-des">
-            <div class="emission-title">
+        <div class="emission" id="emission-low-page-4">
+          <h6 id="lowest-emission-title-page-4">Lowest emissions</h6>
+          <div class="emission-des" id="emission-des-low-page-4">
+            <div class="emission-title" id="emission-title-low-page-4">
               <img src="/assets/emissionlogo.png" alt="emission-logo" />
-              <p>Darwintech manufacturing private Ltd</p>
+              <p id="emission-facility-low-page-4">Darwintech Manufacturing Private Ltd</p>
             </div>
-            <div class="emission-value">
-              <h6>810</h6>
+            <div class="emission-value" id="emission-value-low-page-4">
+              <h6 id="emission-value-low-value-page-4">810</h6>
               <p>Mt CO2</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="chart">
-      <div height="288px" width="336px">
-        <canvas id="bar"></canvas>
+    <div class="chart" id="chart-two-page-4">
+      <div style="height: 288px; width: 336px;">
+        <canvas id="bar-page-4"></canvas>
       </div>
     </div>
   </div>
 </main>
+
 <script src="/viewScripts/chart.js"></script>
 <script src="/viewScripts/page4.js"></script>
 
@@ -79,11 +80,12 @@
     padding: 4px 20px;
   }
 
-  main {
+  #main-page-4 {
     height: 94%;
   }
 
-  .container {
+  #container-one-page-4, 
+  #container-two-page-4 {
     border: 1px #dce1ff solid;
     border-radius: 10px;
     padding: 10px;
@@ -91,7 +93,8 @@
     width: 100%;
   }
 
-  .chart-des {
+  #chart-des-one-page-4, 
+  #chart-des-two-page-4 {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -104,21 +107,24 @@
     padding: 4px 20px;
   }
 
-  .title h3 {
+  #title-one-page-4 h3, 
+  #title-two-page-4 h3 {
     font-size: 1.2rem;
   }
 
-  .title p {
+  #title-one-page-4 p, 
+  #title-two-page-4 p {
     font-size: 1rem;
     color: #00a575;
   }
 
-  .emission-values {
+  #emission-values-page-4 {
     display: flex;
     gap: 10px;
   }
 
-  .emission {
+  #emission-high-page-4, 
+  #emission-low-page-4 {
     background-color: #f6feff;
     padding: 5px;
     border-radius: 8px;
@@ -128,17 +134,20 @@
     width: 250px;
   }
 
-  .emission h6 {
+  #highest-emission-title-page-4, 
+  #lowest-emission-title-page-4 {
     font-size: 0.7rem;
     color: #767680;
   }
 
-  .emission-des {
+  #emission-des-high-page-4, 
+  #emission-des-low-page-4 {
     display: flex;
     gap: 7px;
   }
 
-  .emission-title {
+  #emission-title-high-page-4, 
+  #emission-title-low-page-4 {
     display: flex;
     gap: 4px;
     padding-right: 2px;
@@ -146,23 +155,27 @@
     border-right: 1px solid #dce1ff;
   }
 
-  .emission-title p {
+  #emission-title-high-page-4 p, 
+  #emission-title-low-page-4 p {
     font-size: 0.7rem;
   }
 
-  .emission-title img {
+  #emission-title-high-page-4 img, 
+  #emission-title-low-page-4 img {
     border: #767680 solid 0.4px;
     border-radius: 50%;
     padding: 2px;
     background-color: white;
   }
 
-  .emission-value h6 {
+  #emission-value-high-page-4 h6, 
+  #emission-value-low-page-4 h6 {
     font-size: 1rem;
     color: black;
   }
 
-  .emission-value p {
+  #emission-value-high-page-4 p, 
+  #emission-value-low-page-4 p {
     font-size: 0.35rem;
   }
 </style>

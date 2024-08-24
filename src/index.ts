@@ -22,14 +22,19 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
+app.get("/full", (req, res) => {
+  res.render("full", { ...template, facilities: facilityData });
+})
+
 app.get("/cover", (req, res) => {
   res.render("cover");
 });
 
 app.get("/:page", (req, res) => {
   const { page } = req.params
-  res.render("layout", { ...template, page , facilities:facilityData });
+  res.render("layout", { ...template, page, facilities: facilityData });
 });
+
 /*
 app.get("/page2", (req, res) => {
   res.render("page2", { ...template, page: "02" });

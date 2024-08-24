@@ -1,4 +1,4 @@
-<main>
+<main id="page-5">
   <%- include("./component/heading") %>
   <div class="container container-one">
     <div class="chart-des">
@@ -16,24 +16,24 @@
         <p>Fluid dynamics accounts for 10% of total emissions.</p>
       </div>
       <div class="emission-values">
-        <div class="emission">
+        <div class="emission highest-emission">
           <h6>Highest emissions</h6>
           <div class="emission-des">
             <div class="emission-title">
               <img src="/assets/emissionlogo.png" alt="emission-logo" />
-              <p>Darwintech manufacturing private Ltd</p>
+              <p>Darwintech Manufacturing Private Ltd</p>
             </div>
             <div class="emission-value">
               <h6>810 $</h6>
             </div>
           </div>
         </div>
-        <div class="emission">
+        <div class="emission lowest-emission">
           <h6>Lowest emissions</h6>
           <div class="emission-des">
             <div class="emission-title">
               <img src="/assets/emissionlogo.png" alt="emission-logo" />
-              <p>Darwintech manufacturing private Ltd</p>
+              <p>Darwintech Manufacturing Private Ltd</p>
             </div>
             <div class="emission-value">
               <h6>810 $</h6>
@@ -47,32 +47,32 @@
 </main>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
-
 <style>
-  * {
+  #page-5 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: roboto;
+    font-family: Roboto, sans-serif;
   }
 
-  .emission-value {
+  #page-5 .emission-value {
     font-size: 1.4rem;
     font-weight: 600;
   }
 
-  header {
+  #page-5 header {
     height: 3%;
     border-bottom: 1px solid #dce1ff;
     font-size: 0.6rem;
     text-align: end;
     padding: 4px 20px;
   }
-  main {
+
+  #page-5 main {
     height: 94%;
   }
 
-  .container {
+  #page-5 .container {
     border: 1px #dce1ff solid;
     border-radius: 10px;
     padding: 10px;
@@ -80,34 +80,34 @@
     width: 100%;
   }
 
-  .chart-des {
+  #page-5 .chart-des {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  footer {
+  #page-5 footer {
     height: 3%;
     font-size: 0.6rem;
     border-top: 1px solid #dce1ff;
     padding: 4px 20px;
   }
 
-  .title h3 {
+  #page-5 .title h3 {
     font-size: 1.2rem;
   }
 
-  .title p {
+  #page-5 .title p {
     font-size: 1rem;
     color: #00a575;
   }
 
-  .emission-values {
+  #page-5 .emission-values {
     display: flex;
     gap: 10px;
   }
 
-  .emission {
+  #page-5 .emission {
     background-color: #f6feff;
     padding: 5px;
     border-radius: 8px;
@@ -117,17 +117,17 @@
     width: 290px;
   }
 
-  .emission h6 {
+  #page-5 .emission h6 {
     font-size: 0.7rem;
     color: #767680;
   }
 
-  .emission-des {
+  #page-5 .emission-des {
     display: flex;
     gap: 7px;
   }
 
-  .emission-title {
+  #page-5 .emission-title {
     display: flex;
     gap: 4px;
     padding-right: 4px;
@@ -135,21 +135,23 @@
     border-right: 1px solid #dce1ff;
   }
 
-  .emission-title p {
+  #page-5 .emission-title p {
     font-size: 0.7rem;
   }
 
-  .emission-title img {
+  #page-5 .emission-title img {
     border: #767680 solid 0.4px;
     border-radius: 50%;
     padding: 2px;
     background-color: white;
   }
-  .emission-value h6 {
+
+  #page-5 .emission-value h6 {
     font-size: 1rem;
     color: black;
   }
-  .emission-value p {
+
+  #page-5 .emission-value p {
     font-size: 0.35rem;
   }
 </style>

@@ -1,85 +1,77 @@
-<main>
+<main id="main-page-2">
   <%- include("./component/heading") %>
-  <div class="container container-one">
-    <div class="right">
-      <div class="scope-header">
+  <div class="container container-one" id="container-one-page-2">
+    <div class="right" id="right-one-page-2">
+      <div class="scope-header" id="scope-header-one-page-2">
         <img src="/assets/scopeicon.png" alt="scopeicon" />
-        <h3>Scope 1</h3>
+        <h3 id="scope-title-one-page-2">Scope 1</h3>
       </div>
-      <div class="scope-emission">
-        <h6>Overall emissions</h6>
-        <p class="emission-value">
+      <div class="scope-emission" id="scope-emission-one-page-2">
+        <h6 id="overall-emission-one-page-2">Overall emissions</h6>
+        <p class="emission-value" id="emission-value-one-page-2">
           77654.987
           <span> mt CO2e </span>
         </p>
       </div>
     </div>
-    <div class="left-chart">
+    <div class="left-chart" id="left-chart-one-page-2">
       <div height="288px" width="336px">
-        <canvas id="bar1"></canvas>
+        <canvas id="bar1-page-2"></canvas>
       </div>
     </div>
   </div>
-  <div class="container container-two">
-    <div class="right">
-      <div class="scope-header">
+
+  <div class="container container-two" id="container-two-page-2">
+    <div class="right" id="right-two-page-2">
+      <div class="scope-header" id="scope-header-two-page-2">
         <img src="/assets/scopeicon.png" alt="scopeicon" />
-        <h3>Scope 1</h3>
+        <h3 id="scope-title-two-page-2">Scope 1</h3>
       </div>
-      <div class="scope-emission">
-        <h6>Overall emissions</h6>
-        <p class="emission-value">
+      <div class="scope-emission" id="scope-emission-two-page-2">
+        <h6 id="overall-emission-two-page-2">Overall emissions</h6>
+        <p class="emission-value" id="emission-value-two-page-2">
           77654.987
           <span> mt CO2e </span>
         </p>
       </div>
     </div>
-    <div class="left-chart">
+    <div class="left-chart" id="left-chart-two-page-2">
       <div height="288px" width="336px">
-        <canvas id="bar2"></canvas>
+        <canvas id="bar2-page-2"></canvas>
       </div>
     </div>
   </div>
-  <div class="container container-three">
-    <div class="right">
-      <div class="scope-header">
+
+  <div class="container container-three" id="container-three-page-2">
+    <div class="right" id="right-three-page-2">
+      <div class="scope-header" id="scope-header-three-page-2">
         <img src="/assets/scopeicon.png" alt="scopeicon" />
-        <h3>Scope 1</h3>
+        <h3 id="scope-title-three-page-2">Scope 1</h3>
       </div>
-      <div class="scope-emission">
-        <h6>Overall emissions</h6>
-        <p class="emission-value">
+      <div class="scope-emission" id="scope-emission-three-page-2">
+        <h6 id="overall-emission-three-page-2">Overall emissions</h6>
+        <p class="emission-value" id="emission-value-three-page-2">
           77654.987
           <span> mt CO2e </span>
         </p>
       </div>
     </div>
-    <div class="left-chart">
+    <div class="left-chart" id="left-chart-three-page-2">
       <div height="288px" width="336px">
-        <canvas id="bar3"></canvas>
+        <canvas id="bar3-page-2"></canvas>
       </div>
     </div>
   </div>
 </main>
+
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: roboto;
-  }
-
-  main {
+  #main-page-2 {
     height: 94%;
-    /*
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px; 
-          */
   }
 
-  .scope-emission h6 {
+  #overall-emission-one-page-2, 
+  #overall-emission-two-page-2, 
+  #overall-emission-three-page-2 {
     font-size: 0.7rem;
     font-weight: 300;
     margin-bottom: 3px;
@@ -90,6 +82,7 @@
     font-size: 1.4rem;
     font-weight: 600;
   }
+  
   .emission-value span {
     font-size: 0.9rem;
     font-weight: 300;
@@ -101,15 +94,13 @@
     padding: 10px;
     margin-top: 10px;
     width: 100%;
-    /* 
-          width: 563px; 
-         gap: 10px;
-         */
     height: 216px;
     display: flex;
   }
 
-  .container .right {
+  #right-one-page-2, 
+  #right-two-page-2, 
+  #right-three-page-2 {
     padding-right: 10px;
     width: 40%;
     border-right: 1px #dce1ff solid;
@@ -123,12 +114,7 @@
     gap: 10px;
     align-items: center;
   }
-
-  .scope-header {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
 </style>
+
 <script src="/viewScripts/chart.js"></script>
 <script src="/viewScripts/page2.js"></script>

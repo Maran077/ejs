@@ -1,85 +1,68 @@
-<main>
+<main id="main-page-3">
   <%- include("./component/heading") %>
-  <div class="container container-one">
-    <div class="chart-des">
-      <div class="title">
-        <h3>Emissions by facilities</h3>
-        <p>Fluid dynamics accounts for 10% of total emissions.</p>
+  <div class="container container-one" id="container-one-page-3">
+    <div class="chart-des" id="chart-des-one-page-3">
+      <div class="title" id="title-one-page-3">
+        <h3 id="h3-one-page-3">Emissions by facilities</h3>
+        <p id="p-one-page-3">Fluid dynamics accounts for 10% of total emissions.</p>
       </div>
-      <div class="emission-values">
-        <div class="emission">
-          <h6>Highest emissions</h6>
-          <div class="emission-des">
-            <div class="emission-title">
+      <div class="emission-values" id="emission-values-one-page-3">
+        <div class="emission" id="emission-high-one-page-3">
+          <h6 id="highest-emission-title-one-page-3">Highest emissions</h6>
+          <div class="emission-des" id="emission-des-high-one-page-3">
+            <div class="emission-title" id="emission-title-high-one-page-3">
               <img src="/assets/emissionlogo.png" alt="emission-logo" />
-              <p>Darwintech manufacturing private Ltd</p>
+              <p id="emission-facility-high-one-page-3">Darwintech Manufacturing Private Ltd</p>
             </div>
-            <div class="emission-value">
-              <h6>810</h6>
+            <div class="emission-value" id="emission-value-high-one-page-3">
+              <h6 id="emission-value-high-value-one-page-3">810</h6>
               <p>Mt CO2</p>
             </div>
           </div>
         </div>
-        <div class="emission">
-          <h6>Lowest emissions</h6>
-          <div class="emission-des">
-            <div class="emission-title">
+        <div class="emission" id="emission-low-one-page-3">
+          <h6 id="lowest-emission-title-one-page-3">Lowest emissions</h6>
+          <div class="emission-des" id="emission-des-low-one-page-3">
+            <div class="emission-title" id="emission-title-low-one-page-3">
               <img src="/assets/emissionlogo.png" alt="emission-logo" />
-              <p>Darwintech manufacturing private Ltd</p>
+              <p id="emission-facility-low-one-page-3">Darwintech Manufacturing Private Ltd</p>
             </div>
-            <div class="emission-value">
-              <h6>810</h6>
+            <div class="emission-value" id="emission-value-low-one-page-3">
+              <h6 id="emission-value-low-value-one-page-3">810</h6>
               <p>Mt CO2</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="chart">
+    <div class="chart" id="chart-one-page-3">
       <div height="262px" width="531px">
-        <canvas id="bar"></canvas>
+        <canvas id="bar-page-3"></canvas>
       </div>
     </div>
   </div>
-  <div class="container container-two">
-    <div class="chart-des">
-      <div class="title">
-        <h3>Emissions by facilities</h3>
-        <p>Fluid dynamics accounts for 10% of total emissions.</p>
+  <div class="container container-two" id="container-two-page-3">
+    <div class="chart-des" id="chart-des-two-page-3">
+      <div class="title" id="title-two-page-3">
+        <h3 id="h3-two-page-3">Emissions by facilities</h3>
+        <p id="p-two-page-3">Fluid dynamics accounts for 10% of total emissions.</p>
       </div>
     </div>
-    <div class="chart">
+    <div class="chart" id="chart-two-page-3">
       <div height="192px" width="531px">
-        <canvas id="line"></canvas>
+        <canvas id="line-page-3"></canvas>
       </div>
     </div>
   </div>
 </main>
+
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: roboto;
-  }
-
-  .emission-value {
-    font-size: 1.4rem;
-    font-weight: 600;
-  }
-
-  header {
-    height: 3%;
-    border-bottom: 1px solid #dce1ff;
-    font-size: 0.6rem;
-    text-align: end;
-    padding: 4px 20px;
-  }
-  main {
+  #main-page-3 {
     height: 94%;
   }
 
-  .container {
+  #container-one-page-3, 
+  #container-two-page-3 {
     border: 1px #dce1ff solid;
     border-radius: 10px;
     padding: 10px;
@@ -87,34 +70,31 @@
     width: 100%;
   }
 
-  .chart-des {
+  #chart-des-one-page-3, 
+  #chart-des-two-page-3 {
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
 
-  footer {
-    height: 3%;
-    font-size: 0.6rem;
-    border-top: 1px solid #dce1ff;
-    padding: 4px 20px;
-  }
-
-  .title h3 {
+  #h3-one-page-3, 
+  #h3-two-page-3 {
     font-size: 1.2rem;
   }
 
-  .title p {
+  #p-one-page-3, 
+  #p-two-page-3 {
     font-size: 1rem;
     color: #00a575;
   }
 
-  .emission-values {
+  #emission-values-one-page-3 {
     display: flex;
     gap: 10px;
   }
 
-  .emission {
+  #emission-high-one-page-3, 
+  #emission-low-one-page-3 {
     background-color: #f6feff;
     padding: 5px;
     border-radius: 8px;
@@ -124,17 +104,20 @@
     width: 250px;
   }
 
-  .emission h6 {
+  #highest-emission-title-one-page-3, 
+  #lowest-emission-title-one-page-3 {
     font-size: 0.7rem;
     color: #767680;
   }
 
-  .emission-des {
+  #emission-des-high-one-page-3, 
+  #emission-des-low-one-page-3 {
     display: flex;
     gap: 7px;
   }
 
-  .emission-title {
+  #emission-title-high-one-page-3, 
+  #emission-title-low-one-page-3 {
     display: flex;
     gap: 4px;
     padding-right: 2px;
@@ -142,21 +125,27 @@
     border-right: 1px solid #dce1ff;
   }
 
-  .emission-title p {
+  #emission-title-high-one-page-3 p, 
+  #emission-title-low-one-page-3 p {
     font-size: 0.7rem;
   }
 
-  .emission-title img {
+  #emission-title-high-one-page-3 img, 
+  #emission-title-low-one-page-3 img {
     border: #767680 solid 0.4px;
     border-radius: 50%;
     padding: 2px;
     background-color: white;
   }
-  .emission-value h6 {
+
+  #emission-value-high-one-page-3 h6, 
+  #emission-value-low-one-page-3 h6 {
     font-size: 1rem;
     color: black;
   }
-  .emission-value p {
+
+  #emission-value-high-one-page-3 p, 
+  #emission-value-low-one-page-3 p {
     font-size: 0.35rem;
   }
 </style>

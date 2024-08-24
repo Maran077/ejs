@@ -1,69 +1,43 @@
-<main>
-  <div class="report">
-    <h2>Sustainability report</h2>
+<main id="main-page-1">
+  <div class="report" id="report-page-1">
+    <h2 id="report-title-page-1">Sustainability report</h2>
 
-    <table>
+    <table id="report-table-page-1">
       <% for(let name in facilities) { %>
       <tr>
-        <td><%= name %></td>
-        <td class="table-value"><%= facilities[name] %></td>
+        <td class="facility-name-page-1"><%= name %></td>
+        <td class="table-value-page-1"><%= facilities[name] %></td>
       </tr>
       <% } %>
     </table>
   </div>
-  <div class="chart">
-    <h3>Overall emissions by scope for 01-Jan-2023 to 01-Dec-2023</h3>
-    <p><span> 77654.987 </span> mt CO2e</p>
-    <canvas id="myChart"></canvas>
+  <div class="chart" id="chart-page-1">
+    <h3 id="chart-title-page-1">Overall emissions by scope for 01-Jan-2023 to 01-Dec-2023</h3>
+    <p id="chart-value-page-1"><span> 77654.987 </span> mt CO2e</p>
+    <canvas id="myChart-page-1"></canvas>
   </div>
 </main>
+
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: roboto;
-  }
-
-  body {
-    height: 842px;
-  }
-
-  .body {
-    height: 100%;
-    padding: 4px;
-  }
-
-  header {
-    height: 3%;
-    border-bottom: 2px solid #dce1ff;
-    font-size: 0.6rem;
-    text-align: end;
-    padding: 4px 20px;
-  }
-
-  main {
+  #main-page-1 {
     height: 94%;
-    /*
-          justify-content: center; 
-          */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
 
-  .report {
+  #report-page-1 {
     width: 50%;
     text-align: center;
   }
 
-  .report table {
+  #report-table-page-1 {
     width: 100%;
-    margin-left: 100px;
+    /* margin-left: 100px; */
   }
 
-  .chart {
+  #chart-page-1 {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -72,52 +46,53 @@
     border: #dce1ff solid 1.3px;
   }
 
-  footer {
+  #footer-page-1 {
     height: 3%;
     font-size: 0.6rem;
     border-top: 2px solid #dce1ff;
     padding: 4px 20px;
   }
 
-  td {
+  #report-table-page-1 td {
     text-align: start;
     padding: 5px 10px;
     font-size: 10px;
     font-weight: 400;
   }
 
-  h2 {
+  #report-title-page-1 {
     margin-block: 10px;
     font-size: 24px;
     font-weight: 500;
   }
 
-  p span {
+  #chart-value-page-1 span {
     font-size: 15px;
     font-weight: 500;
     text-align: center;
     color: #5b73c4;
   }
-  p {
+
+  #chart-value-page-1 {
     font-size: 12px;
     font-weight: 400;
   }
 
-  .table-value {
+  .table-value-page-1 {
     font-weight: 500;
   }
-  h3 {
+
+  #chart-title-page-1 {
     font-size: 14px;
     font-weight: 600;
   }
 </style>
+
 <script type="module" src="/viewScripts/page2.js"></script>
 <!--
-
-
     <script>
         Chart.register(ChartDataLabels);
-        const ctx = document.getElementById('myChart').getContext('2d');
+        const ctx = document.getElementById('myChart-page-1').getContext('2d');
         const myChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
@@ -125,51 +100,10 @@
                 datasets: [{
                     label: 'Scope 1',
                     data: [12, 19, 3, 5, 2, 3, 7],
-                    // backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    // fill: false,
                     borderColor: '#fff',
                     backgroundColor: ['#0054AD', '#0099D2', '#00C8CF'],
                 }]
             },
-            /*
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        enabled: true
-                    }
-                },
-                scales: {
-                    x: {
-                        grid: {
-                            display: false 
-                        },
-                        ticks: {
-                            display: false 
-                        },
-                        border: {
-                            display: false
-                        }
-                    },
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            display: false 
-                        },
-                        ticks: {
-                            display: false 
-                        },
-                        border: {
-                            display: false
-                        }
-                       
-                    }
-                }
-            }
-         */
             options: {
                 responsive: true,
                 plugins: {
@@ -206,4 +140,4 @@
         });
 
     </script>
-    -->
+-->
